@@ -13,5 +13,6 @@ export default [
   {id: 4, imgPath: grape},
   {id: 5, imgPath: orange},
   {id: 6, imgPath: strawberry},
-  {id: 7, imgPath: watermelon},
+  // {id: 7, imgPath: watermelon},
+  // {id: 8, imgPath: watermelon},
 ];

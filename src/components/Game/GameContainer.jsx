@@ -1,11 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import fruits from '../../cardsData/fuitCardsData';
+import Game from './Game';
 console.clear();
+let setOfCards = [...fruits,...fruits];
 
 let GameContainer = () => {
   const [mixedCards, setMixedCards] = useState([]);
+  const [openCards, checkOpenCards] = useState([]);
+  const [cardsIdentic, setCardsIdentic] = useState([]);
+  const [movesMade, setMovesCount] = useState(0);
 
-  let setOfCards = [...fruits,...fruits];
   let mixCards = cards => {
     let currentLength = cards.length;
 
@@ -24,7 +28,7 @@ let GameContainer = () => {
 
   return (
     <div>
-      <main>GAME</main>
+      <Game cards={mixedCards}/>
     </div>
   );
 }
