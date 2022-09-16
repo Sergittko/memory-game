@@ -1,23 +1,53 @@
-import React from 'react';
-import style from './Game.module.css'
+import React, { useState, useEffect } from "react";
+import style from "./Game.module.css";
+import Card from "./Card/Card";
 
-let GameContainer = props => {
-  console.log(props.cards);
+let Game = React.memo((props) => {
+  let [movesMade, setMovesCount] = useState(0);
+  let [openCards, addOpenCards] = useState([]);
+  let [cardsIdentic, setCardsIdentic] = useState([]);
+
+  const flipCard = (index) => {
+    addOpenCards([...openCards, index]);
+    setMovesCount(++movesMade);
+  };
+
+  useEffect(() => {
+    if (openCards.length < 2) return;
+    const firstCard = props.cards[openCards[0]].id;
+    const secondCard = props.cards[openCards[1]].id;
+    if (firstCard === secondCard) {
+      setCardsIdentic([...cardsIdentic, firstCard, secondCard]);
+    }
+    if (openCards.length === 2) setTimeout(() => addOpenCards([]), 500);
+  }, [openCards]);
+
+  let restartGame = () => {
+    props.mixCards();
+    setMovesCount(0);
+    addOpenCards([]);
+    setCardsIdentic([]);
+  }
   return (
     <div>
-      <p className={style.madeMoves}>Made 8 moves in the game</p>
+      <p className={style.madeMoves}>Made {movesMade} moves in the game</p>
       <div className={style.gameContainer}>
-        {props.cards.map((el,key) => {
+        {props.cards.map((el, index) => {
+          let cardFlipped = false;
+          if (openCards.includes(index)) cardFlipped = true;
+          if (cardsIdentic.includes(el.id)) cardFlipped = true;
           return (
-            <div className={style.cardContainer} key={el.imgPath + '_' + key}>
-              <img src={el.imgPath} alt={el.imgPath}/>
+            <div
+              className={`${style.card} ${cardFlipped ? style.flipped : ""}`}
+              key={el.imgPath + "_" + index}>
+              <Card imgPath={el.imgPath} changeMoves={() => flipCard(index)} />
             </div>
-          )
+          );
         })}
       </div>
-      <button className={style.resetButton}>Reset Game</button>
+      <button onClick={()=> restartGame()} className={style.resetButton}>Reset Game</button>
     </div>
   );
-}
+});
 
-export default GameContainer;
+export default Game;

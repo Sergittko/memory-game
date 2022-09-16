@@ -1,0 +1,42 @@
+.cardContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.2s all;
+  border-radius: 7px;
+}
+
+.cardContainer img {
+  width: 100%;
+}
+
+.front,
+.back {
+  border-radius: 7px;
+  backface-visibility: hidden;
+  transition: 0.2s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.back:hover {
+  transform: scale(1.03);
+}
+
+.front {
+  transform: rotateY(180deg);
+  background-color: #73444b;
+}
+
+.back {
+  padding: 24px;
+  background-color: #FFEBEE;
+  transition: 0.2s ease all;
+}

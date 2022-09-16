@@ -2,32 +2,27 @@
   max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  background-color: rgb(58 120 253 / 35%);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  /* background-color: rgb(58 120 253 / 35%); */
+  background: linear-gradient(120deg, rgba(212, 41, 195, 1) 0%, rgba(255, 67, 49, 1) 50%, rgba(244, 157, 93, 1) 100%);
   padding: 20px;
   border-radius: 10px;
-}
-
-.cardContainer {
-  max-width: 150px;
-  background-color: #73444b;
-  border-radius: 7px;
-  transition: 0.2s;
-}
-
-.cardContainer img {
-  width: 100%;
-}
-
-.cardContainer:hover {
-  background-color: #734471;
 }
 
 .madeMoves {
   margin: 10px 0;
   font-size: 20px;
+}
+
+.card{
+  max-width: 150px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+.card.flipped > div{
+  transform: rotateY(180deg);
 }
 
 .resetButton {
@@ -38,4 +33,13 @@
   font-size: 20px;
   background-color: rgb(58 120 253 / 50%);
   color: #eee;
+  transition: 0.2s;
+}
+
+.resetButton:hover {
+  background-color: #875085;
+}
+
+.resetButton:active {
+  background-color: #734471;
 }
