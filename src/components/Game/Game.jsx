@@ -16,7 +16,7 @@ let Game = React.memo((props) => {
     if (openCards.length < 2) return;
     const firstCard = props.cards[openCards[0]].id;
     const secondCard = props.cards[openCards[1]].id;
-    if (firstCard === secondCard) {
+    if (firstCard === secondCard && openCards[0] !== openCards[1]) {
       setCardsIdentic([...cardsIdentic, firstCard, secondCard]);
     }
     if (openCards.length === 2) setTimeout(() => addOpenCards([]), 500);
