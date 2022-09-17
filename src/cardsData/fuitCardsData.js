@@ -5,6 +5,7 @@ import grape from '../../src/img/fruits/grape.png';
 import orange from '../../src/img/fruits/orange.png';
 import strawberry from '../../src/img/fruits/strawberry.png';
 import watermelon from '../../src/img/fruits/watermelon.png';
+import pineapple from '../../src/img/fruits/pineapple.png';
 
 export default [
   {id: 1, imgPath: apple},
@@ -13,6 +14,6 @@ export default [
   {id: 4, imgPath: grape},
   {id: 5, imgPath: orange},
   {id: 6, imgPath: strawberry},
+  // {id: 8, imgPath: pineapple},
   // {id: 7, imgPath: watermelon},
-  // {id: 8, imgPath: watermelon},
 ];

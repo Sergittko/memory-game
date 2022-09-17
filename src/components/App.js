@@ -1,4 +1,4 @@
-import style from "./App.module.css";
+import "./App.module.css";
 import GameContainer from "./Game/GameContainer";
 
 function App() {
