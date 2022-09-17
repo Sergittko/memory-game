@@ -29,15 +29,17 @@ section {
 
 footer {
   font-size: 30px;
-  /* background-color: #0ce925; */
+  background-color: #98409c;
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 20px;
   text-align: center;
+  box-sizing: content-box;
 }
 
 footer,
 h1 {
   font-family: 'Games', sans-serif;
+  color: #eae4ce;
 }
 
 button,
