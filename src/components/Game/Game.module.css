@@ -15,13 +15,12 @@
   font-size: 20px;
 }
 
-.card{
+.card {
   max-width: 150px;
-  width: 150px;
-  height: 150px;
   cursor: pointer;
 }
-.card.flipped > div{
+
+.card.flipped>div {
   transform: rotateY(180deg);
 }
 
@@ -42,4 +41,19 @@
 
 .resetButton:active {
   background-color: #734471;
+}
+
+@media only screen and (max-width: 425px) {
+  .gameContainer {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 15px;
+  }
+  .resetButton{
+    margin: 5px 0 10px 0;
+    padding: 7px;
+    width: 70%;
+  }
+  .madeMoves{
+    margin: 0 0 5px 0;
+  }
 }

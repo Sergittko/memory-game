@@ -14,7 +14,6 @@ body {
 h1 {
   font-size: 60px;
   margin: 30px 0;
-  width: min-content;
   text-transform: uppercase;
 }
 
@@ -45,4 +44,15 @@ h1 {
 button,
 body{
   font-family: 'Vagabond', sans-serif;
+}
+
+@media only screen and (max-width: 425px) {
+  h1{
+    font-size: 40px;
+    margin: 15px 0;
+  }
+  footer{
+    font-size: 30px;
+    padding: 10px 20px;
+  }
 }
