@@ -6,7 +6,7 @@ function App() {
     <section>
       <h1>Memory Game</h1>
       <GameContainer/>
-      <footer> Sergio Diorov - GitHub </footer>
+      <footer> <a href="https://github.com/Sergittko" target="_blank">Sergio Diorov - GitHub</a></footer>
     </section>
   );
 }

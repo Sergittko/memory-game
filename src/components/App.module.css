@@ -3,17 +3,21 @@
 @import url('http://fonts.cdnfonts.com/css/game');
 @import url('http://fonts.cdnfonts.com/css/vagabond');
 
+html {
+  min-height: 100%;
+}
 
 body {
-  background: rgb(115 43 108);
+  background: rgb(203, 74, 112);
+  background: linear-gradient(180deg, rgba(203, 74, 112, 1) 0%, rgba(245, 189, 140, 1) 100%) fixed;
   font-family: 'Roboto', sans-serif;
   color: #f7f7f7;
   text-align: center;
 }
 
 h1 {
-  font-size: 60px;
-  margin: 30px 0;
+  font-size: 55px;
+  margin: 10px 0;
   text-transform: uppercase;
 }
 
@@ -27,32 +31,44 @@ section {
 }
 
 footer {
-  font-size: 30px;
-  background-color: #98409c;
+  font-size: 28px;
+  background-color: #cc4d71;
   width: 100%;
   padding: 15px 20px;
   text-align: center;
   box-sizing: content-box;
 }
 
-footer,
+footer a {
+  transition: 0.5s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer a,
 h1 {
   font-family: 'Games', sans-serif;
-  color: #eae4ce;
+  color: #fcfcfd;
 }
 
 button,
-body{
+body {
   font-family: 'Vagabond', sans-serif;
 }
 
 @media only screen and (max-width: 425px) {
-  h1{
+  section {
+    padding: 0 30px;
+  }
+  h1 {
     font-size: 40px;
     margin: 15px 0;
   }
-  footer{
-    font-size: 30px;
-    padding: 10px 20px;
+
+  footer {
+    font-size: 22px;
+    padding: 10px 30px;
   }
 }

@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: 0.2s all;
+  transition: 0.4s all cubic-bezier(0.34, 0.89, 0.75, 1.62);
   border-radius: 7px;
 }
 
@@ -31,15 +31,25 @@
 
 .front {
   transform: rotateY(180deg);
-  background-color: #73444b;
+  /* background-color: #f9e9d9; */
+  background-color: #eae4ce;
 }
 
 .back {
   position: absolute;
-  background-color: #FFEBEE;
+  background: rgb(164, 218, 233);
+  background: linear-gradient(180deg, rgba(164, 218, 233, 1) 0%, rgba(239, 146, 160, 1) 100%);
   transition: 0.2s ease all;
+  z-index: 0;
 }
 
 .back img {
   transform: scale(0.7);
+}
+
+@media only screen and (max-width: 425px) {
+  .front,
+  .back {
+    border-radius: 15px;
+  }
 }
