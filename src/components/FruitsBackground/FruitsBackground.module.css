@@ -1,0 +1,59 @@
+.fruits_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.fruits_container img {
+  position: absolute;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.fruits_container img:nth-child(1n) {
+  max-width: 150px;
+}
+
+.fruits_container img:nth-child(2n) {
+  max-width: 110px;
+}
+
+.fruits_container img:nth-child(3n) {
+  max-width: 190px;
+}
+
+.fruits_container img:nth-child(1) {
+  top: 2%;
+  left: 2%;
+}
+
+.fruits_container img:nth-child(2) {
+  bottom: 12%;
+  left: 1%;
+}
+
+.fruits_container img:nth-child(3) {
+  top: 4%;
+  right: 1%;
+}
+
+.fruits_container img:nth-child(4) {
+  bottom: 10%;
+  right: 0;
+}
+
+.fruits_container img:nth-child(5) {
+  bottom: 50%;
+  right: 10%;
+}
+
+.fruits_container img:nth-child(6) {
+  top: 30%;
+  left: 5%;
+}
+
+.fruits_container img:nth-child(7) {
+  top: 60%;
+  left: 2%;
+}

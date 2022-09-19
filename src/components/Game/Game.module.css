@@ -1,4 +1,5 @@
 .gameContainer {
+  position: relative;
   max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -7,11 +8,14 @@
   background-color: #fef8e8;
   padding: 20px;
   border-radius: 10px;
+  z-index: 1;
 }
 
 .madeMoves {
+  position: relative;
   margin: 10px 0;
   font-size: 20px;
+  z-index: 1;
 }
 
 .card {
@@ -24,6 +28,7 @@
 }
 
 .resetButton {
+  position: relative;
   margin: 20px 0;
   padding: 10px;
   width: 100%;
@@ -37,8 +42,8 @@
   background-image: linear-gradient(to left, #56d4c8, #5eb8e3);
   background-size: 300%;
   background-position: 0 0;
-
   -webkit-appearance: none !important;
+  z-index: 1;
 }
 
 .resetButton:hover {
