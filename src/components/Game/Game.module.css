@@ -21,6 +21,9 @@
 .card {
   max-width: 150px;
   cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 
 .card.flipped>div {
@@ -38,7 +41,6 @@
   /* background: linear-gradient(#56d4c8, #56d4c8); */
   color: #4d4d4d;
   transition: 0.4s;
-
   background-image: linear-gradient(to left, #56d4c8, #5eb8e3);
   background-size: 300%;
   background-position: 0 0;
@@ -75,9 +77,15 @@
   }
 }
 
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 754px) {
   .card {
     max-width: 130px;
+  }
+}
+
+@media only screen and (min-height: 1100px) {
+  .card {
+    max-width: 200px;
   }
 }
 

@@ -8,12 +8,15 @@ let Game = React.memo((props) => {
   let [cardsIdentic, setCardsIdentic] = useState([]);
 
   const flipCard = (index) => {
+    if (openCards[0] === index) return;
+    if (openCards.length >= 2) return;
     addOpenCards([...openCards, index]);
-    setMovesCount(++movesMade);
   };
 
   useEffect(() => {
     if (openCards.length < 2) return;
+    if (openCards.length > 2) return;
+    setMovesCount(++movesMade);
     const firstCard = props.cards[openCards[0]].id;
     const secondCard = props.cards[openCards[1]].id;
     if (firstCard === secondCard && openCards[0] !== openCards[1]) {
