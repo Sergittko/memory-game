@@ -1,8 +1,15 @@
 {
   "files": {
-    "main.css": "/memory-game/static/css/main.fa00ec71.css",
-    "main.js": "/memory-game/static/js/main.687a7ee1.js",
+    "main.css": "/memory-game/static/css/main.2f0fe231.css",
+    "main.js": "/memory-game/static/js/main.d7f9861b.js",
     "static/media/pineapple.png": "/memory-game/static/media/pineapple.ad05df1c25b279b72e34.png",
+    "static/media/fruit-7.png": "/memory-game/static/media/fruit-7.1cec9f92a1501a9ab5d3.png",
+    "static/media/fruit-3.png": "/memory-game/static/media/fruit-3.97d78ee244eb229e5a96.png",
+    "static/media/fruit-4.png": "/memory-game/static/media/fruit-4.d67d55a5db349f421cf4.png",
+    "static/media/fruit-5.png": "/memory-game/static/media/fruit-5.1dd078a58fe837426a94.png",
+    "static/media/fruit-1.png": "/memory-game/static/media/fruit-1.afa2d216b500a2cf5079.png",
+    "static/media/fruit-2.png": "/memory-game/static/media/fruit-2.67bc0a5aa7185b729e2b.png",
+    "static/media/fruit-6.png": "/memory-game/static/media/fruit-6.8fc35f933d5ffc2e1bb6.png",
     "static/media/watermelon.png": "/memory-game/static/media/watermelon.272b16c9ad95119fbd8e.png",
     "static/media/grape.png": "/memory-game/static/media/grape.7459cff11287aea16a93.png",
     "static/media/bannana.png": "/memory-game/static/media/bannana.ea8a44533384a92357d8.png",
@@ -12,11 +19,11 @@
     "static/media/cherry.png": "/memory-game/static/media/cherry.ebe1e19bdf48135946bf.png",
     "static/media/questionMark.png": "/memory-game/static/media/questionMark.ceae1d69667b627871a3.png",
     "index.html": "/memory-game/index.html",
-    "main.fa00ec71.css.map": "/memory-game/static/css/main.fa00ec71.css.map",
-    "main.687a7ee1.js.map": "/memory-game/static/js/main.687a7ee1.js.map"
+    "main.2f0fe231.css.map": "/memory-game/static/css/main.2f0fe231.css.map",
+    "main.d7f9861b.js.map": "/memory-game/static/js/main.d7f9861b.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa00ec71.css",
-    "static/js/main.687a7ee1.js"
+    "static/css/main.2f0fe231.css",
+    "static/js/main.d7f9861b.js"
   ]
 }
