@@ -81,7 +81,7 @@
   }
 }
 
-@media only screen and (max-height: 600px), and (min-width:768px) {
+@media only screen and (max-height: 560px), and (max-width:568px) {
   .gameContainer {
     grid-template-columns: repeat(6, 1fr);
   }
