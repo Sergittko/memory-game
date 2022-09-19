@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('http://fonts.cdnfonts.com/css/games');
-@import url('http://fonts.cdnfonts.com/css/game');
-@import url('http://fonts.cdnfonts.com/css/vagabond');
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
 
 html {
   height: 100%;
@@ -54,13 +56,16 @@ footer a:hover {
 
 footer a,
 h1 {
-  font-family: 'Games', sans-serif;
+  font-family: 'Chango', cursive;
+  /* font-family: 'Sigmar One', cursive; */
+  /* font-family: 'Modak', cursive; */
   color: #fcfcfd;
 }
 
 button,
 body {
-  font-family: 'Vagabond', sans-serif;
+  /* font-family: 'Signika Negative', sans-serif; */
+  font-family: 'Mitr', sans-serif;
 }
 
 @media only screen and (max-width: 425px) {

@@ -37,9 +37,7 @@
   width: 100%;
   border-radius: 30px;
   font-size: 22px;
-  /* background-color: #56d4c8; */
-  /* background: linear-gradient(#56d4c8, #56d4c8); */
-  color: #4d4d4d;
+  color: #323232;
   transition: 0.4s;
   background-image: linear-gradient(to left, #56d4c8, #5eb8e3);
   background-size: 300%;
