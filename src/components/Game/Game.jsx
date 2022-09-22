@@ -3,21 +3,12 @@ import style from "./Game.module.css";
 import Card from "./Card/Card";
 import Preloader from "../Preloader/Preloader";
 import WinAlert from "../WinAlert/WinAlert";
-import hand_pointer from '../../img/hand-pointerr2.png';
 
 let Game = React.memo((props) => {
   let [movesMade, setMovesCount] = useState(0);
   let [openCards, addOpenCards] = useState([]);
   let [cardsIdentic, setCardsIdentic] = useState([]);
   let [loading, isLoaded] = useState(false);
-  let [userActive, setUserActive] = useState('unactive');
-
-  // setTimeout(()=>{
-  //   if (userActive === 'unactive') {
-  //     setUserActive(false)
-  //   }
-  // },4000);
-
 
   const flipCard = (index) => {
     if (openCards[0] === index) return;
@@ -43,7 +34,6 @@ let Game = React.memo((props) => {
     setMovesCount(0);
     addOpenCards([]);
     setCardsIdentic([]);
-    setUserActive('unactive');
     setTimeout(()=>isLoaded(false),2000);
   }
   return (
@@ -61,16 +51,11 @@ let Game = React.memo((props) => {
           return (
             <div
               className={`${style.card} ${cardFlipped ? style.flipped : ""}`}
-              key={el.imgPath + "_" + index}
-              onClick={()=>setUserActive(true)}>
+              key={el.imgPath + "_" + index}>
               <Card imgPath={el.imgPath} changeMoves={() => flipCard(index)} />
             </div>
           );
         })}
-
-        { userActive === false?
-          <img className={style.handPointer} src={hand_pointer} alt="handPointer"/> : null
-        }
       </div>
       <button onClick={()=> restartGame()} className={style.resetButton}>Reset Game</button>
     </div>
