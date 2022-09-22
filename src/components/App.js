@@ -5,9 +5,9 @@ import GameContainer from "./Game/GameContainer";
 import FruitsBackground from "./FruitsBackground/FruitsBackground";
 
 function App() {
-  let[mousePosition, changeMousePosition] = useState([]);
+  let mousePosition = [];
   return (
-    <section onMouseMove={(e)=> changeMousePosition([e.clientX, e.clientY])}>
+    <section onMouseMove={(e)=> mousePosition = [e.clientX, e.clientY]}>
       <h1>Memory Game</h1>
       {isMobile? null :<FruitsBackground mousePosition={mousePosition}/>}
       <GameContainer/>
