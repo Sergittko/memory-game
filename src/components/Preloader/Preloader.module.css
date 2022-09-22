@@ -9,10 +9,12 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
-  animation: loader 1s forwards;
+  animation: loader 1.5s forwards;
 }
 .preloaderContainer img{
-  width: 150px
+  width: 25%;
+  opacity: 0;
+  animation: loaderGIF 1.2s forwards;
 }
 
 @keyframes loader {
@@ -20,16 +22,31 @@
     opacity: 0;
     z-index: 999;
   }
-  10%{
+  1%{
     opacity: 1;
     z-index: 999;
   }
-  90%{
+  95%{
     opacity: 1;
     z-index: 999;
   }
   100%{
     opacity: 0;
     z-index: 0;
+  }
+}
+
+@keyframes loaderGIF {
+  0%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 1;
+  }
+  92%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
   }
 }
