@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import style from "./Game.module.css";
 import Card from "./Card/Card";
 import Preloader from "../Preloader/Preloader";
+import WinAlert from "../WinAlert/WinAlert";
 import hand_pointer from '../../img/hand-pointerr2.png';
 
 let Game = React.memo((props) => {
@@ -50,7 +51,10 @@ let Game = React.memo((props) => {
       <p className={style.madeMoves}>Made {movesMade} moves in the game</p>
       <div className={style.gameContainer}>
         { loading? <Preloader/> : null}
-          {props.cards.map((el, index) => {
+        { cardsIdentic.length === props.cards.length && movesMade > 0?
+        <WinAlert/> : null}
+
+        {props.cards.map((el, index) => {
           let cardFlipped = false;
           if (openCards.includes(index)) cardFlipped = true;
           if (cardsIdentic.includes(el.id)) cardFlipped = true;

@@ -11,6 +11,7 @@
   opacity: 0;
   animation: loader 1.5s forwards;
 }
+
 .preloaderContainer img{
   width: 25%;
   opacity: 0;
